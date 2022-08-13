@@ -1,9 +1,8 @@
 Q1) test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), 
 --     birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım
 
--diff
--text in red 
- CREATE TABLE employee(
+
+CREATE TABLE employee(
 id int,
 name VARCHAR(50),
 email VARCHAR(100),
@@ -62,4 +61,57 @@ insert into employee (id, name, email, birthday) values (47, 'Bellina', 'btomala
 insert into employee (id, name, email, birthday) values (48, 'Thedric', 'truston1b@patch.com', '2021-08-28');
 insert into employee (id, name, email, birthday) values (49, 'Andonis', 'amacdermid1c@e-recht24.de', '2021-12-13');
 insert into employee (id, name, email, birthday) values (50, 'Salim', 'stuffin1d@google.it', '2022-03-15');
+
+Q3)Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+
+----1
+UPDATE employee 
+SET name='Sofia',
+    email= 'sofialuthier@gmail.com'
+WHERE id=1;
+
+---2
+
+UPDATE employee 
+SET name='gisela'
+WHERE name LIKE 'M%';
+
+---3
+UPDATE employee 
+SET name='Nico'
+    
+WHERE id>21;
+
+---4
+UPDATE employee 
+SET id=11
+    
+WHERE name='Lulu';
+
+---5
+UPDATE employee 
+SET name='Berke'
+    
+WHERE birthday>'2021-09-12';
+
+
+Q4)Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+---1
+DELETE FROM employee
+WHERE birthday<'2022-05-01';
+
+---2
+DELETE FROM employee
+WHERE id=28 ;
+
+
+---3
+
+DELETE FROM employee
+WHERE id>21;
+
+---4
+DELETE FROM employee
+WHERE id=12 ;
 
